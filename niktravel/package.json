@@ -1,0 +1,22 @@
+{
+  "name": "niktravel",
+  "version": "1.0.0",
+  "description": "pagina web de turismo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ikkerxd/iktravel.git"
+  },
+  "keywords": [
+    "web/travel/cusco"
+  ],
+  "author": "henrry sairitupac",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ikkerxd/iktravel/issues"
+  },
+  "homepage": "https://github.com/ikkerxd/iktravel#readme"
+}

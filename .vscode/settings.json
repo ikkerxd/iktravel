@@ -1,0 +1,6 @@
+{
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "python.pythonPath": "/home/ikkerxd/entornos/iktravelenv/bin/python",
+    "python.venvPath": "/home/ikkerxd/entornos/iktravelenv/bin/python"
+}
