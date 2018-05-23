@@ -1,4 +1,9 @@
 @charset "UTF-8";
+/* paleta de clores*/
+/* fonts */
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400");
+/*-- z index --*/
+/*== toggle menu ==*/
 /**
   EDgrid es una librería CSS para construir layouts con Responsive Web Design
   Importe este archivo en su proyecto para empezar a usarlo
@@ -12,7 +17,8 @@
 
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
 }
 
 img {
@@ -28,19 +34,19 @@ a:hover {
   text-decoration: underline;
 }
 
-.ed-container {
+.ed-container, .header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  max-width: 1200px;
+  max-width: 960px;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
 }
 
-.ed-item {
+.ed-item, .toggle-menu, .logo-header, .main-nav {
   margin: 0;
   padding-left: 0.9375em;
   padding-right: 0.9375em;
@@ -871,4 +877,198 @@ body.sticky-footer > footer {
   -webkit-transform: scale(0.97);
       -ms-transform: scale(0.97);
           transform: scale(0.97);
+}
+
+.title1 {
+  font-size: 1.999em;
+  line-height: 30px;
+}
+
+@media screen and (min-width: 640px) {
+  .title1 {
+    font-size: 2.827em;
+    line-height: 37.5px;
+  }
+}
+
+.title2 {
+  font-size: 1.414em;
+  line-height: 22.5px;
+}
+
+@media screen and (min-width: 640px) {
+  .title2 {
+    font-size: 1.999em;
+    line-height: 30px;
+  }
+}
+
+.title3 {
+  font-size: 1em;
+  line-height: 15px;
+}
+
+@media screen and (min-width: 640px) {
+  .title3 {
+    font-size: 1.414em;
+    line-height: 15px;
+  }
+}
+
+small, .small {
+  font-size: 0.707em;
+  line-height: 9px;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+.toggle-menu {
+  width: 20%;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+  .toggle-menu {
+    display: none;
+  }
+}
+
+.bar, .bar::before, .bar::after {
+  display: block;
+  height: 2.8px;
+  width: 23px;
+  background-color: #fff;
+}
+
+.bar {
+  position: relative;
+  margin-top: 8.4px;
+  margin-bottom: 8.4px;
+}
+
+.bar::before, .bar::after {
+  content: '';
+  position: absolute;
+}
+
+.bar::before {
+  -webkit-transform: translateY(-7px);
+      -ms-transform: translateY(-7px);
+          transform: translateY(-7px);
+}
+
+.bar::after {
+  -webkit-transform: translateY(7px);
+      -ms-transform: translateY(7px);
+          transform: translateY(7px);
+}
+
+.logo-header {
+  width: 80%;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 640px) {
+  .logo-header {
+    width: 20%;
+  }
+}
+
+.main-nav {
+  width: 100%;
+  position: fixed;
+  width: 14em;
+  right: -14em;
+  top: 0;
+  background-color: #333;
+  bottom: 0;
+}
+
+@media screen and (min-width: 640px) {
+  .main-nav {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main-nav {
+    position: static;
+    background-color: transparent;
+  }
+}
+
+.main-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .main-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main-menu__item, .main-menu__item--phone {
+    padding: 1em 1em;
+  }
+}
+
+.main-menu__link {
+  display: block;
+  padding: 1em 1em;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: #b3b3b3;
+  border-bottom: 1px solid #4d4d4d;
+  font-size: .85em;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+  .main-menu__link {
+    display: inline;
+    padding: 0;
+    color: #ffF;
+    text-transform: uppercase;
+    display: inline;
+    border-bottom: none;
+  }
+}
+
+.main-menu__link:hover {
+  text-decoration: none;
+  background-color: #1a1a1a;
+  color: #cccccc;
+}
+
+@media screen and (min-width: 1024px) {
+  .main-menu__link:hover {
+    background-color: transparent;
+    color: #fff;
+  }
+}
+
+.app {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+}
+
+.header {
+  height: 70px;
+  background-color: green;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }

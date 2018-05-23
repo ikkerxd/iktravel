@@ -1,4 +1,8 @@
 $cssCore: false;
 $cssHelpers: true;
 $devMode: false;
+
+$max-width: 960px;
+
+@import 'settings';
 @import 'ed-grid';

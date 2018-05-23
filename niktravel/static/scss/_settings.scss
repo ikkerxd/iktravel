@@ -1,0 +1,49 @@
+/* paleta de clores*/
+
+//-- colores prmarios
+
+$prymary: #b63327;
+
+//-- colores secundarios
+$secundary: #333;
+
+
+
+/* fonts */
+
+//-- tamaño de fuente
+
+$t1: 2.827em; // h1
+$t2: 1.999em; // h2
+$t3: 1.414em; // h3
+$base: 1em; // parrafos
+$s1: 0.707em; // small
+$s2: 0.5em;
+$s3: 354em;
+
+//-- line height
+
+$line-height: 15px;
+
+//-- nombre de fuente
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
+$family: 'Raleway', sans-serif; 
+
+//-- grosor de fuente
+$light: 300;
+$regular: 400;
+
+/*-- z index --*/
+
+
+/*== toggle menu ==*/
+$width-toggle: 23px;
+$height-toggle: 2.8px;
+
+// height header
+
+$height-header: 70px;
+
+// width off canvas
+$offcanvas-width: 14em;

@@ -1,0 +1,43 @@
+@mixin fontTtile($f-size, $l-height) {
+    font-size: $f-size;
+    line-height: $l-height;
+}
+
+.title {
+    $lh: $line-height;
+    &1 {
+        @include fontTtile($t2, $lh*2);
+        
+        @include from(m) {
+            @include fontTtile($t1, $lh*2.5);
+        }
+    }
+    &2 {
+        @include fontTtile($t3, $lh*1.5);
+        
+        @include from(m) {
+            @include fontTtile($t2, $lh*2);
+        }
+
+    }
+    &3 {
+        @include fontTtile($base, $lh);
+        
+        @include from(m) {
+            @include fontTtile($t3, $lh);
+        }
+    }
+}
+
+small, .small {
+    $lh: $line-height;    
+    @include fontTtile($s1, $lh*0.6);
+}
+
+h1, h2, h3 , h4 {
+    margin: 0;
+}
+
+p {
+
+}

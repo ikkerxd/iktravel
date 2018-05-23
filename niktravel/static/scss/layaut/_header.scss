@@ -1,0 +1,6 @@
+.header {
+    @include edContainer;
+    height: $height-header;
+    background-color:green;
+    align-items: center;
+}

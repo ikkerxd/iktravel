@@ -1,0 +1,64 @@
+.main-nav {
+    @include edItem(100, 80);
+    
+    position: fixed;
+    width:  $offcanvas-width;
+    right: -$offcanvas-width;
+    top: 0;
+    background-color: $secundary;
+    bottom: 0;
+
+    @include from(l) {
+        position: static;
+        background-color: transparent;
+        
+    }
+}
+
+.main-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @include from(l) {
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    &__item, &__item--phone{
+         @include from(l) {
+            padding: 1em 1em;
+         }
+    }
+
+    &__link {
+        display: block;
+        padding: 1em 1em;
+        font-weight: bold;
+        text-transform: capitalize;
+        color: lighten($secundary, 50%);
+        border-bottom: 1px solid lighten($secundary, 10%);
+        font-size: .85em;
+        cursor: pointer;
+        @include from(l) {
+            display: inline;
+            padding: 0;
+            color: #ffF;
+            text-transform: uppercase;
+            display: inline;
+            border-bottom: none;
+            
+        }
+        &:hover {
+            text-decoration: none;
+            background-color: darken($secundary, 10%);
+            color: lighten($secundary, 60%);
+            @include from(l) {
+                background-color: transparent;
+                color: #fff;
+            } 
+        }
+
+        
+    }
+}

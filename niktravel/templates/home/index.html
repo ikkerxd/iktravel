@@ -1,16 +1,23 @@
-{% load  staticfiles %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-</head>
-<body>
-    <div class="ed-container full">
-        <h1>hola mundo</h1>    
-    </div>
-</body>
-</html>
+{% extends "home/base_home.html" %}
+
+{% load l10n %}
+
+{% block title %}
+  Agencia de viaje
+{% endblock %}
+
+{% block description %}
+  operador turistico
+{% endblock %}
+
+{% block content %}
+  <div class="app">
+
+    {% include "include/header.html" %}
+    <main class="main">
+        
+    </main>
+    {% include "include/footer.html" %}
+  </div>
+
+{% endblock %}
