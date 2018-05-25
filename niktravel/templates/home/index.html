@@ -1,5 +1,7 @@
 {% extends "home/base_home.html" %}
 
+{% load  staticfiles %}
+
 {% load l10n %}
 
 {% block title %}
@@ -16,6 +18,127 @@
     {% include "include/header.html" %}
     <main class="main">
         
+      <div class="banner">
+        <img src="{% static 'img/machu-picchu.jpg' %}" alt="" class="banner__img">
+        <div class="banner__data">
+          <h1 class="banner__title">cusco</h1>
+          <p class="banner__description">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit minus, inventore aliquam eligendi perferendis est quas repudiandae id nostrum molestiae.
+          </p>
+        </div>
+      </div>
+
+      <section class="section">
+        <h2 class="section__title">MEJORES OFERTAS</h2>
+        <span class="section__subtitle">mira nuestras mejores promociones en tours</span>
+
+        <div class="tours">
+          
+          <div class="tour">
+            <img src="" alt="" class="tour__img">
+            <div class="tour__data">
+              <span class="tour__city">cusco</span>
+              <span class="tour__day">8 dias</span>
+              <h3 class="tour__title">valle sagrado</h3>
+              <span class="tour__cost">$ 800</span>
+              <ul class="tour-detail">
+                <li class="tour-detail__item">4-5 dias</li>
+                <li class="tour-detail__item">Visistar centro arqueoligicos</li>
+                <li class="tour-detail__item">vsitar muchupicchu</li>
+                <li class="tour-detail__item">100% satisfacion Garantisada.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tour">
+            <img src="" alt="" class="tour__img">
+            <div class="tour__data">
+              <span class="tour__city">cusco</span>
+              <span class="tour__day">8 dias</span>
+              <h3 class="tour__title">valle sagrado</h3>
+              <span class="tour__cost">$ 800</span>
+              <ul class="tour-detail">
+                <li class="tour-detail__item">4-5 dias</li>
+                <li class="tour-detail__item">Visistar centro arqueoligicos</li>
+                <li class="tour-detail__item">vsitar muchupicchu</li>
+                <li class="tour-detail__item">100% satisfacion Garantisada.</li>
+              </ul>
+            </div>
+          </div>
+        
+          <div class="tour">
+              <img src="" alt="" class="tour__img">
+              <div class="tour__data">
+                <span class="tour__city">cusco</span>
+                <span class="tour__day">8 dias</span>
+                <h3 class="tour__title">valle sagrado</h3>
+                <span class="tour__cost">$ 800</span>
+                <ul class="tour-detail">
+                  <li class="tour-detail__item">4-5 dias</li>
+                  <li class="tour-detail__item">Visistar centro arqueoligicos</li>
+                  <li class="tour-detail__item">vsitar muchupicchu</li>
+                  <li class="tour-detail__item">100% satisfacion Garantisada.</li>
+                </ul>
+              </div>
+          </div>
+
+          <div class="tour">
+              <img src="" alt="" class="tour__img">
+              <div class="tour__data">
+                <span class="tour__city">cusco</span>
+                <span class="tour__day">8 dias</span>
+                <h3 class="tour__title">valle sagrado</h3>
+                <span class="tour__cost">$ 800</span>
+                <ul class="tour-detail">
+                  <li class="tour-detail__item">4-5 dias</li>
+                  <li class="tour-detail__item">Visistar centro arqueoligicos</li>
+                  <li class="tour-detail__item">vsitar muchupicchu</li>
+                  <li class="tour-detail__item">100% satisfacion Garantisada.</li>
+                </ul>
+              </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section__title">PORQUE ELEGIRNOS</h2>
+
+        <div class="cards">
+
+          <div class="card">
+            <i>imagen</i>
+            <h3 class="card__title">World Class Service</h3>  
+            <p class="card__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia praesentium laborum omnis laudantium voluptatem inventore rerum aperiam saepe ipsum.</p>
+            <a href="" class="card__link">mas información.</a>
+          </div>
+
+          <div class="card">
+              <i>imagen</i>
+              <h3 class="card__title">World Class Service</h3>  
+              <p class="card__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia praesentium laborum omnis laudantium voluptatem inventore rerum aperiam saepe ipsum.</p>
+              <a href="" class="card__link">mas información.</a>
+          </div>
+
+          <div class="card">
+              <i>imagen</i>
+              <h3 class="card__title">World Class Service</h3>  
+              <p class="card__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia praesentium laborum omnis laudantium voluptatem inventore rerum aperiam saepe ipsum.</p>
+              <a href="" class="card__link">mas información.</a>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="secction__title">mejores ofertas</h2>
+        <span class="secctions__subtitle">mira nuestras tours mas recientes</span>
+        
+        <div class="tours">
+          
+        
+        </div>
+      </section>
     </main>
     {% include "include/footer.html" %}
   </div>

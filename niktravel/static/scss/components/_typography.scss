@@ -3,7 +3,7 @@
     line-height: $l-height;
 }
 
-.title {
+ %title {
     $lh: $line-height;
     &1 {
         @include fontTtile($t2, $lh*2);
@@ -26,6 +26,15 @@
         @include from(m) {
             @include fontTtile($t3, $lh);
         }
+    }
+}
+
+%base{
+    $lh: $line-height;
+    @include fontTtile($s1, $lh);
+        
+    @include from(m) {
+        @include fontTtile($base, $lh);
     }
 }
 

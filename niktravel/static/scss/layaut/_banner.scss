@@ -1,0 +1,33 @@
+.banner {
+    position: relative;
+    &__img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    &__data {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        left: 0;
+        margin: auto;
+        color: #fff;
+        width: 90%;
+        text-align: center;
+
+        @include from(m) {
+            width: 50%;
+        }
+        
+    }
+    &__title {
+        @extend %title1;
+        text-transform: uppercase;       
+        
+    }
+    &__description {
+        @extend %base;
+    }
+
+}
