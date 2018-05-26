@@ -1,0 +1,77 @@
+.cards {
+    display: grid;
+    max-width: $max-width;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+
+    grid-template-columns: 1fr;
+    grid-gap: $gutter * 3.5;
+
+    @include from(m) {
+        grid-template-columns: repeat(3, 1fr);    
+        grid-gap: $gutter;
+        
+    }
+
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color:#fff;
+    text-align: center;
+    
+    padding: $gutter*3 $gutter*1.5 $gutter*2;
+    &__icon {
+        position: absolute;
+        height: 70px;
+        width: 70px;
+        top: -35px;
+        font-size: $t2;
+
+        @include from(m) {
+            height: 60px;
+            width: 60px;
+            top: -30px;
+            font-size: $t3;           
+        }
+        
+        right: 0;
+        left: 0;
+        margin-left:auto;
+        margin-right:auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        border-radius: 50%;
+        background-color: $primary;
+        color: #fff;
+
+    }
+    &__title {
+        font-size: $t3;
+        font-weight: 800;
+        @include from(m){
+            font-size: $base;
+        }
+    }
+    &__description {
+        color: #666;
+        line-height: 1.65;
+        flex: 1;
+
+        @include from(m) {
+            line-height: 1.5;            
+            font-size: 0.87em;           
+        }
+    }
+    &__link {
+        color: $primary;
+        font-size: 0.85em;                   
+        padding: $gutter 0;
+    }
+}

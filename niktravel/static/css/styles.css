@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* paleta de clores*/
 /* fonts */
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400");
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,600");
 /*-- z index --*/
 /*== toggle menu ==*/
 /**
@@ -34,7 +34,7 @@ a:hover {
   text-decoration: underline;
 }
 
-.ed-container, .section, .header {
+.ed-container, .section, .section--paralax, .header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -46,7 +46,7 @@ a:hover {
   width: 100%;
 }
 
-.ed-item, .toggle-menu, .logo-header, .main-nav, .section__title, .section__subtitle {
+.ed-item, .toggle-menu, .logo-header, .main-nav, .tours, .section__title, .section__subtitle, .section--paralax__title {
   margin: 0;
   padding-left: 0.9375em;
   padding-right: 0.9375em;
@@ -879,6 +879,80 @@ body.sticky-footer > footer {
           transform: scale(0.97);
 }
 
+@font-face {
+  font-family: "iktravel";
+  src: url("../fonts/iktravel.eot");
+  src: url("../fonts/iktravel.eot?#iefix") format("embedded-opentype"), url("../fonts/iktravel.woff") format("woff"), url("../fonts/iktravel.ttf") format("truetype"), url("../fonts/iktravel.svg#iktravel") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[data-icon]:before {
+  font-family: "iktravel" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "iktravel" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facebook:before {
+  content: "\61";
+}
+
+.icon-instagram:before {
+  content: "\64";
+}
+
+.icon-youtube:before {
+  content: "\65";
+}
+
+.icon-vimeo:before {
+  content: "\66";
+}
+
+.icon-phone:before {
+  content: "\62";
+}
+
+.icon-whatsapp:before {
+  content: "\63";
+}
+
+.icon-map-marker:before {
+  content: "\67";
+}
+
+.icon-star:before {
+  content: "\68";
+}
+
+.icon-globe:before {
+  content: "\69";
+}
+
+.icon-price-tag:before {
+  content: "\6a";
+}
+
 .banner__title {
   font-size: 1.999em;
   line-height: 30px;
@@ -891,25 +965,37 @@ body.sticky-footer > footer {
   }
 }
 
-.section__subtitle {
+.tour__title, .tour__cost {
+  font-size: 1.414em;
+  line-height: 22.5px;
+}
+
+@media screen and (min-width: 640px) {
+  .tour__title, .tour__cost {
+    font-size: 1.999em;
+    line-height: 30px;
+  }
+}
+
+.tour__city, .tour-detail, .section__subtitle {
   font-size: 1em;
   line-height: 15px;
 }
 
 @media screen and (min-width: 640px) {
-  .section__subtitle {
+  .tour__city, .tour-detail, .section__subtitle {
     font-size: 1.414em;
     line-height: 15px;
   }
 }
 
-.banner__description {
+.tour__day, .banner__description {
   font-size: 0.707em;
   line-height: 15px;
 }
 
 @media screen and (min-width: 640px) {
-  .banner__description {
+  .tour__day, .banner__description {
     font-size: 1em;
     line-height: 15px;
   }
@@ -1059,6 +1145,214 @@ h1, h2, h3, h4 {
   }
 }
 
+.tours {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 0.9375em;
+}
+
+@media screen and (min-width: 640px) {
+  .tours {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.9375em 0.46875em;
+  }
+}
+
+.tour {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 3em 2em auto;
+}
+
+@media screen and (min-width: 640px) {
+  .tour {
+    grid-template-rows: 1fr 2.5em 2em auto;
+  }
+}
+
+.tour__img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  grid-row: 1;
+  grid-column: 1/3;
+}
+
+.tour__city {
+  font-weight: 600;
+  font-style: italic;
+  grid-row: 2;
+  grid-column: 1;
+  -ms-flex-item-align: center;
+      align-self: center;
+  color: #b63327;
+}
+
+@media screen and (min-width: 640px) {
+  .tour__city {
+    font-size: 1em;
+  }
+}
+
+.tour__day {
+  grid-row: 2;
+  grid-column: 2;
+  justify-self: end;
+  -ms-flex-item-align: center;
+      align-self: center;
+  color: #b63327;
+}
+
+@media screen and (min-width: 640px) {
+  .tour__day {
+    font-size: 1em;
+  }
+}
+
+.tour__title {
+  grid-row: 3;
+  grid-column: 1;
+  -ms-flex-item-align: start;
+      align-self: start;
+}
+
+@media screen and (min-width: 640px) {
+  .tour__title {
+    font-size: 1em;
+  }
+}
+
+.tour__cost {
+  font-weight: 600;
+  grid-row: 3;
+  grid-column: 2;
+  justify-self: end;
+  -ms-flex-item-align: start;
+      align-self: start;
+}
+
+@media screen and (min-width: 640px) {
+  .tour__cost {
+    font-size: 1em;
+  }
+}
+
+.tour-detail {
+  grid-row: 4;
+  grid-column: 1/3;
+  margin: 0;
+  list-style: none;
+  padding: 0 0.46875em;
+}
+
+@media screen and (min-width: 640px) {
+  .tour-detail {
+    font-size: 0.707em;
+  }
+}
+
+.tour-detail__item {
+  padding: 3.75px;
+}
+
+.cards {
+  display: grid;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  grid-template-columns: 1fr;
+  grid-gap: 3.28125em;
+}
+
+@media screen and (min-width: 640px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.9375em;
+  }
+}
+
+.card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #fff;
+  text-align: center;
+  padding: 2.8125em 1.40625em 1.875em;
+}
+
+.card__icon {
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  top: -35px;
+  font-size: 1.999em;
+  right: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  background-color: #b63327;
+  color: #fff;
+}
+
+@media screen and (min-width: 640px) {
+  .card__icon {
+    height: 60px;
+    width: 60px;
+    top: -30px;
+    font-size: 1.414em;
+  }
+}
+
+.card__title {
+  font-size: 1.414em;
+  font-weight: 800;
+}
+
+@media screen and (min-width: 640px) {
+  .card__title {
+    font-size: 1em;
+  }
+}
+
+.card__description {
+  color: #666;
+  line-height: 1.65;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+@media screen and (min-width: 640px) {
+  .card__description {
+    line-height: 1.5;
+    font-size: 0.87em;
+  }
+}
+
+.card__link {
+  color: #b63327;
+  font-size: 0.85em;
+  padding: 0.9375em 0;
+}
+
 .app {
   position: relative;
   display: grid;
@@ -1084,7 +1378,38 @@ h1, h2, h3, h4 {
   width: 100%;
   text-align: center;
   color: #b63327;
-  padding-bottom: 15px;
+  padding-bottom: 30px;
+}
+
+.section--paralax {
+  max-width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 30px;
+  padding-bottom: 75px;
+  background-image: url("../img/machu-picchu-2.jpg");
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (min-width: 640px) {
+  .section--paralax {
+    height: 400px;
+  }
+}
+
+.section--paralax__title {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 800;
 }
 
 .header {

@@ -50,6 +50,9 @@
 @import "components/css-core";        // componentes que se compilaran por default a css
 @import "components/css-helpers";     // ayudas en css (por medio de clases)
 
+// Fuente de iconos
+@import "components/fonts";
+
 // my components
 @import "components/typography";       // estilos par los titulos
 
@@ -59,6 +62,8 @@
 
 // collections
 @import "collections/nav.scss";
+@import "collections/tours.scss";
+@import "collections/cards.scss";
 
 // layuaut 
 @import "layaut/app.scss";
