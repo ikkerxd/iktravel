@@ -13,13 +13,13 @@ $secundary: #333;
 
 //-- tamaño de fuente
 
-$t1: 2.827em; // h1
-$t2: 1.999em; // h2
-$t3: 1.414em; // h3
-$base: 1em; // parrafos
-$s1: 0.707em; // small
-$s2: 0.5em;
-$s3: 354em;
+$t1: 2.827rem; // h1
+$t2: 1.999rem; // h2
+$t3: 1.414rem; // h3
+$base: 1rem; // parrafos
+$s1: 0.817rem; // small
+$s2: 0.5rem;
+$s3: 354rem;
 
 //-- line height
 
@@ -35,7 +35,7 @@ $light: 300;
 $regular: 400;
 
 /*-- z index --*/
-
+$z-header: 100;
 
 /*== toggle menu ==*/
 $width-toggle: 23px;

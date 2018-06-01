@@ -1,25 +1,64 @@
+{% load  staticfiles %}
+
 <footer class="footer">
-    <section class="footer__data">
-        <div class="footer__data__about">
-            hola mundo
-        </div>
-        <div class="footer__data__info">
+    <div class="footer-container">
+        <section class="footer__data">
+            <div class="footer__about">
+                <span class="footer__logo">
+                    INKATRAVEL VIP
+                </span>
+                <p class="footer__description">
+                    Lorem ipsum dolor sit amet adipisicing elit. Provident, earum, commodi laborum minima soluta architecto consectetur distinctio.
+                </p>
+            </div>
+            <div class="footer__info">
+                <h3 class="footer__title">contacto</h3>
+                <div class="footer__info__item">
+                    <span class="icon-map-marker"></span>
+                    Santa Lucila c-1-bm wabchaq, cusco ,cusco
+                </div>
+                <div class="footer__info__item">
+                    <span class="icon-phone"></span>
+                    +51-956866875
+                </div>
+                <div class="footer__info__item">
+                    <span class="icon-envelope"></span>
+                    correo@mail.com
+                </div>
+            </div>
+            <div class="footer__tripavisor">
+                    <h3 class="fotter__title">TRIPAVISOR</h3>
+            </div>
+        </section>
+        <section class="footer__referencs">
+            <div class="footer__desc">
+                <span>Convenios y descuentos:</span>
+                <img src="{% static 'img/logo-aiesec.png' %}" alt="logo aiesec" class="footer__aiesec">
+                <img src="{% static 'img/logo-isic_opt.png' %}" alt="logo isic" class="footer__isic">
+            </div>
+            <div class="footer__pay">
+                <span>Avalado por:</span>
+                <img src="{% static 'img/dircetur.png' %}" alt="logo de dircetur">
+                <img src="{% static 'img/mincetur.png' %}" alt="logo de mincetur">
+                <img src="{% static 'img/promperu.png' %}" alt="logo promperu">
+                <img src="{% static 'img/mapi.png' %}" alt="logo machupicchu">
+            </div>  
+        </section>
+    </div> <!-- fin footer-container -->
 
-        </div>
-        <div class="footer__data__tripavisor">
-
+    <section class="footer__end">
+        <div class="footer__end-container">
+            <div class="social">
+                <span class="icon-facebook"></span>
+                <span class="icon-instagram"></span>
+                <span class="icon-youtube"></span>
+                <span class="icon-whatsapp"></span>
+            </div>
+            <div class="copy">
+                &copy; Todos los derechos reservados a Inka Travel Vip | desarrolado por :<a href="#">Henrry</a>
+            </div>
         </div>
     </section>
-    <section class="footer__referencs">
-        <div class="footer__referens__desc">
 
-        </div>
-        <div class="footer__referens__pay">
-
-        </div>  
-    </section>
-    <section class="footer__social">
-
-    </section>
 
 </footer>
