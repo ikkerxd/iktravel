@@ -1,0 +1,89 @@
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: $line-height*1.7;
+    
+
+    @include from(m) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 350px) 500px;
+        grid-gap: 2px;
+    }
+    &__item {
+        background-color: red;
+        &:last-child {
+            position: relative;
+            @include from(m) {
+                grid-area: 3/span 3;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                background: #000;
+                opacity: .3;
+            }
+        }
+
+    }
+    &__img {
+        height: 350px;
+        display: block;
+        object-fit: cover;
+    }
+
+    &__img--action {
+        height: 350px;
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        @include from(m) {
+            height: 500px;         
+        }
+    }
+    
+    &__info {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 80%;
+        z-index: $z-info;
+        transform: translate(-50%,-50%);
+
+        padding: 1.5em 1em;
+        border: 1px solid #fff;
+        color: #fff;
+
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        @include from(m) {
+            padding: 4.5em 1em;
+            border: 2px solid #fff;
+            width: 40%;
+        }
+    }
+    &__price {
+        font-size: $s1;
+        font-style: italic;
+    }
+    &__call {
+        @extend %title2;
+        display: block;
+        margin-bottom: $gutter*1.5;
+        font-weight: $regular;
+        text-transform: uppercase;        
+        
+    }
+    &__btn {
+        @include edgridButton(#2980b9,#fff, round);
+        align-self: center;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+}

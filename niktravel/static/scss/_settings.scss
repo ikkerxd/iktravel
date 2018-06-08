@@ -6,7 +6,7 @@ $primary: #b63327;
 
 //-- colores secundarios
 $secundary: #333;
-
+$tertiary: #cfd8dc;
 
 
 /* fonts */
@@ -27,15 +27,16 @@ $line-height: 15px;
 
 //-- nombre de fuente
 
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,600');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700,700i');
 $family: 'Raleway', sans-serif; 
 
 //-- grosor de fuente
-$light: 300;
-$regular: 400;
+$light: 400;
+$regular: 700;
 
 /*-- z index --*/
 $z-header: 100;
+$z-info: 5;
 
 /*== toggle menu ==*/
 $width-toggle: 23px;

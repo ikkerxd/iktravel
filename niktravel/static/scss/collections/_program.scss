@@ -1,0 +1,18 @@
+.program-container {
+    @include edItem(100);
+}
+.program {
+    &__day {
+        display: block;
+        color: $primary;
+        line-height: $line-height*2;
+    }
+    &__title {
+        line-height: $line-height*2;
+    }
+    &__description {
+        color: #333;
+        font-size: $s1;
+        line-height: $line-height*1.3;
+    }
+}

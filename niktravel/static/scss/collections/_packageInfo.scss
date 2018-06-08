@@ -1,0 +1,41 @@
+.package-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include from(m) {
+        flex-direction: row;
+        align-items: stretch;
+    }
+}
+
+.package {
+    &__box {
+        border-bottom: 1px solid $tertiary;
+        padding: $gutter $gutter*0.5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        font-weight: $regular;
+        @include from(m) {
+            border-left: 1px solid $tertiary;
+            &:last-child {
+                border-right: 1px solid $tertiary;
+            }
+        }
+
+    }
+    &__label {
+        display: block;
+        color: $tertiary;
+        margin-bottom: $gutter;
+        font-style: italic;
+
+    }
+    &__content {
+        font-size: $t3;
+    }
+    &__btn {
+        @include edgridButton(#2980b9,#fff, round);
+    }
+}

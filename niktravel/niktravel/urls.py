@@ -19,9 +19,13 @@ from django.contrib import admin
 from django.urls import re_path, path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
 
     #app home
     re_path(r'^', include('applications.home.urls')),
 
+    #app tours
+    path('tour/', include('applications.tours.urls')),
+
+
+    path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -40,6 +40,7 @@ THIRD_APPS = [
 
 LOCAL_APPS = [
     'applications.home',
+    'applications.tours',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_APPS + LOCAL_APPS

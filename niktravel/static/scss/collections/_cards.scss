@@ -54,7 +54,7 @@
     }
     &__title {
         font-size: $t3;
-        font-weight: 800;
+        font-weight: $regular;
         @include from(m){
             font-size: $base;
         }

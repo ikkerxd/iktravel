@@ -1,0 +1,9 @@
+.list {
+    padding-left: $gutter;
+    font-size: $s1;
+    color: #333;
+    margin-bottom: 0;
+    &__item {
+        padding-bottom: $line-height*0.5;    
+    }
+}

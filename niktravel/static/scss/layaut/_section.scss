@@ -1,19 +1,29 @@
 .section {
     @include edContainer;
     flex-direction: column;
-    margin-top: $line-height*1.5;
+    margin-top: $line-height*1.8;
 
     &__title {
         @include edItem;
         text-align: center;
         padding-bottom: $line-height*0.5;
+        font-weight: $regular;
     }
     &__subtitle {
         @include edItem;
-        @extend %title3;
         text-align: center;
         color: $primary;
-        padding-bottom: $line-height*2;
+        padding-bottom: $line-height*1.5;
+        font-style: italic;
+        @include from(m) {
+            padding-bottom: $line-height*2.5;            
+        }
+    }
+    &__content {
+        @include edItem(100);
+        color: #333;
+        font-size: $s1;
+        line-height: $line-height*1.3;
     }
 }
 

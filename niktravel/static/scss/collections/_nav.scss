@@ -34,7 +34,7 @@
     &__link {
         display: block;
         padding: 1em 1em;
-        font-weight: bold;
+        font-weight: $regular;
         text-transform: capitalize;
         color: lighten($secundary, 50%);
         border-bottom: 1px solid lighten($secundary, 10%);

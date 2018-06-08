@@ -15,14 +15,39 @@
         color: #fff;
         width: 90%;
         text-align: center;
+        display: flex;
+        flex-direction: column;
 
         @include from(m) {
             width: 50%;
         }
         
     }
+    &__city {
+        @extend %title3;
+        font-weight: $regular;
+        font-style: italic;
+        margin-bottom: $gutter*0.5;
+        align-self: center;
+        padding: 5px 2px;
+        position: relative;
+
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2.5px;
+            background-color: #fff;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
     &__title {
-        @extend %title1;
+    @extend %title1;
         text-transform: uppercase;       
         
     }
