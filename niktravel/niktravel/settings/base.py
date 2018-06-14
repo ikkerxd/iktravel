@@ -40,7 +40,10 @@ THIRD_APPS = [
 
 LOCAL_APPS = [
     'applications.home',
+    'applications.miscelanea',
     'applications.tours',
+    'applications.galeria',
+    'applications.itinerario',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_APPS + LOCAL_APPS
@@ -78,7 +81,7 @@ WSGI_APPLICATION = 'niktravel.wsgi.application'
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-pe'
+LANGUAGE_CODE = 'es-pe'
 
 TIME_ZONE = 'UTC'
 

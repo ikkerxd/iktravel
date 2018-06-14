@@ -2,4 +2,4 @@ from django.views.generic import TemplateView
 
 
 class IndexView(TemplateView):
-    template_name = 'tours/detail.html'
+    template_name = 'home/index.html'
