@@ -2,7 +2,7 @@
 
 {% load  staticfiles %}
 
-{% load l10n %}
+{% load l18n %}
 
 {% block title %}
   Agencia de viaje
@@ -51,7 +51,7 @@
 
               </ul>
               <div class="tour__footer">
-                <a href="#" class="tour__btn">MAS INFORCIÓN.</a>
+                <a href="{% url 'tours_app:detail' oferta.category oferta.slug %}" class="tour__btn">MAS INFORCIÓN.</a>
               </div>
             </div>            
           {% endfor %}
@@ -161,7 +161,7 @@
             <div class="tour--new">
               <img src="{{ tour.cover.url }}" alt="{{ tour.name }}" title="{{ tour.name }}" class="tour--new__img">
               
-              <a href="">
+              <a href="{% url 'tours_app:detail' tour.category tour.slug %}">
                 <div class="tour--new__info">
                   <span class="tour--new__city">{{ tour.place }}</span>
                   <span class="tour--new__day">{{ tour.duration }} dias</span>

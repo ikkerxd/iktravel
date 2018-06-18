@@ -42,7 +42,7 @@ class Tour(TimeStampedModel):
         max_digits=6,
         decimal_places=2,
         default=0
-    ) # Precio en dolares del tour 
+    ) # Precio en dolares del tour
     price_des_dolar = models.DecimalField(
         'precio con descuento en dolares',
         blank=True,
@@ -50,7 +50,7 @@ class Tour(TimeStampedModel):
         max_digits=6,
         decimal_places=2,
         default=0
-    ) # Precio con descuento en dolares del tour 
+    ) # Precio con descuento en dolares del tour
     category = models.ForeignKey(
         Category,
         verbose_name='categoria',

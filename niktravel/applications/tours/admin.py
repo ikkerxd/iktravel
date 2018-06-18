@@ -19,8 +19,8 @@ class PhotoInline(admin.TabularInline):
     '''Tabular Inline View for Photo'''
 
     model = Photo
-    max_num = 5
-    extra = 5
+    max_num = 7
+    extra = 7
 
 @admin.register(Tour)
 class TourAdmin(admin.ModelAdmin):

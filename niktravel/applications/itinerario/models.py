@@ -24,6 +24,7 @@ class Itinerary(TimeStampedModel):
         """Meta definition for Itinerary."""
 
         verbose_name = 'Itinerario'
+        ordering = ['created']
 
     def __str__(self):
         """Unicode representation of Itinerary."""
