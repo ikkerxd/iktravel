@@ -1,0 +1,90 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-06-18 20:47-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: niktravel/settings/base.py:97
+msgid "Español"
+msgstr "Spanish"
+
+#: niktravel/settings/base.py:98
+msgid "Ingles"
+msgstr "English"
+
+#: templates/home/index.html:26
+msgid ""
+"Mística ciudad sagrada, considerada la capital del Imperio Tahuantinsuyo con "
+"un gran legado histórico y arquitectónico. Rodeada de valles verdosos con "
+"imponentes atractivos turísticos, cultura, tradición y fe aún latente. "
+"Conocida como el ombligo del mundo por ser el centro político y territorial "
+"del Imperio Incaico, el departamento de Cusco nos muestra una impactante "
+"variedad geográfica desde naturales cordilleras y relieves, hasta ríos como "
+"el Urubamba."
+msgstr "the text is english por favor :("
+
+#: templates/home/index.html:32 templates/home/index.html:155
+msgid "MEJORES OFERTAS"
+msgstr "BEST OFFERS"
+
+#: templates/home/index.html:33
+msgid "mira nuestras mejores promociones en tours"
+msgstr "Check out our best promotion tours"
+
+#: templates/home/index.html:49
+msgid "dia(s)"
+msgstr "day(s)"
+
+#: templates/home/index.html:54
+msgid "MAS INFORCIÓN"
+msgstr "MORE INFO"
+
+#: templates/home/index.html:126
+msgid "PORQUE ELEGIRNOS"
+msgstr "WHY CHOOSE US"
+
+#: templates/home/index.html:132 templates/home/index.html:139
+#: templates/home/index.html:146
+msgid "World Class Service"
+msgstr ""
+
+#: templates/home/index.html:133
+msgid ""
+"Lorem ipsum dolor. Mollitia praesentium laborum omnis laudantium voluptatem "
+"inventore rerum aperiam saepe ipsum"
+msgstr ""
+
+#: templates/home/index.html:134 templates/home/index.html:141
+#: templates/home/index.html:148
+msgstr "more info"
+msgid "mas información"
+
+#: templates/home/index.html:140
+msgid ""
+"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia "
+"praesentium laborum omnis aperiam saepe ipsum"
+msgstr ""
+
+#: templates/home/index.html:147
+msgid ""
+"Lorem ipsum dolor sit amet, consect adipiscing elit. Aenean commodo ligula "
+"eget dolor. Aenean massa"
+msgstr ""
+
+#: templates/home/index.html:156
+msgid "Mira nuestras tours mas recientes"
+msgstr ""

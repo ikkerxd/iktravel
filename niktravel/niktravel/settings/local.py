@@ -6,7 +6,8 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 # Database
-# https://docs.djangoproject.com/en/2.0/ref/settings/#databases
+
+    # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {
     'default': {
@@ -46,3 +47,5 @@ STATICFILES_DIRS = [BASE_DIR.child('static')]
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR.child('media')
+
+LOCALE_PATHS = [BASE_DIR.child('locale')]

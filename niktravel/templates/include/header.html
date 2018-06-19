@@ -1,3 +1,5 @@
+{% load i18n %}
+
 <header class="header">
     <div class="toggle-menu" id="toogle-menu">
         <span class="bar" aria-hidden="true"></span>
@@ -9,21 +11,36 @@
     
     <nav class="main-nav">
         <ul class="main-menu">
-        <li class="main-menu__item">
-            <a href="#" class="main-menu__link">full day</a>
-        </li>
-        <li class="main-menu__item">
-            <a href="#" class="main-menu__link">paquetes</a>
-        </li>
-        <li class="main-menu__item">
-            <a href="#" class="main-menu__link">tours machupicchu</a>
-        </li>
-        <li class="main-menu__item">
-            <a href="#" class="main-menu__link">quiens somos</a>
-        </li>
-        <li class="main-menu__item--phone">
-            <a href="#" class="main-menu__link">Telefono</a>
-        </li>
+            <li class="main-menu__item">
+                <a href="#" class="main-menu__link">{% trans 'full day' %}</a>
+            </li>
+            <li class="main-menu__item">
+                <a href="#" class="main-menu__link">{% trans 'paquetes' %}</a>
+            </li>
+            <li class="main-menu__item">
+                <a href="#" class="main-menu__link">{% trans 'tours machupicchu' %} </a>
+            </li>
+            <li class="main-menu__item">
+                <a href="#" class="main-menu__link">{% trans 'quienes somos' %}</a>
+            </li>
+            <li class="main-menu__item--phone">
+                <a href="#" class="main-menu__link">{% trans 'Telefono' %}</a>
+            </li>
         </ul>
     </nav>
+
+    <form id="form-language" action="{% url 'set_language' %}" method="post">{% csrf_token %}
+        <input name="next" type="hidden" value="{{ redirect_to }}" />
+        <select id="language" name="language">
+            {% get_current_language as LANGUAGE_CODE %}
+            {% get_available_languages as LANGUAGES %}
+            {% get_language_info_list for LANGUAGES as languages %}
+            {% for language in languages %}
+                <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                    {{ language.name_local }} ({{ language.code }})
+                </option>
+            {% endfor %}
+        </select>
+    </form>
+
 </header>

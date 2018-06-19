@@ -2,7 +2,7 @@
 
 {% load  staticfiles %}
 
-{% load l10n %}
+{% load i18n %}
 
 {% block title %}
   Agencia de viaje
@@ -11,6 +11,8 @@
 {% block description %}
   operador turistico
 {% endblock %}
+
+{% comment %} {% get_current_language as LANGUAGE_CODE %} {% endcomment %}
 
 {% block content %}
   <div class="app">
@@ -21,7 +23,7 @@
       <div class="banner">
         <img src="{{ tour.cover.url }}" alt="{{ tour.name }}" title="{{ tour.name }}" class="banner__img">
         <div class="banner__data">
-          <span class="banner__city">Perú, {{ tour.place }}</span>
+          <span class="banner__city">Perú {{ LANGUAGE_CODE }}, {{ tour.place }}</span>
           <h1 class="banner__title">{{ tour.name }}</h1>
         </div>
       </div>
@@ -30,28 +32,28 @@
           <div class="package-info">
 
             <div class="package__box">
-                <span class="package__label">DURACIÓN</span>
+                <span class="package__label">{% trans 'DURACIÓN' %}</span>
                 <span class="package__content">{{ tour.duration }} DIAS</span>
             </div>
 
             <div class="package__box">
-                <span class="package__label">PRICE</span>
+                <span class="package__label">{% trans 'PRECIO' %}</span>
                 <span class="package__content">$.{{ tour.price_sol }}</span>
             </div>
 
             <div class="package__box">
-                <span class="package__label">DISPONIBILIDAD</span>
+                <span class="package__label">{% trans 'DISPONIBILIDAD' %}</span>
                 
                 {% if tour.duration == "1" %}
-                  <span class="package__content">Consultar</span>                  
+                  <span class="package__content">{% trans 'Consultar' %}</span>                  
                 {% else %}
-                  <span class="package__content">TODO EL AÑO</span>
+                  <span class="package__content">{% trans 'TODO EL AÑO' %}</span>
                 {% endif %}
                   
             </div>
 
             <div class="package__box">
-                <a href="#" class="package__btn">COMPRAR</a>
+                <a href="#" class="package__btn">{% trans 'COMPRAR' %}</a>
             </div>
 
           </div>
@@ -59,15 +61,30 @@
 
 
 
-
-
       <section class="section">
         <h2 class="section__title">{{ tour.name }}</h2>
         <span class="section__subtitle">Experiencia en {{ tour.duration }} dia(s) de viaje</span>
         
-        <div class="section__content">
-          <p>{{ tour.description_es }}</p> 
-        </div>
+        {% if LANGUAGE_CODE == "es" %}
+          <div class="section__content">
+            <p>{{ tour.description_es }}</p> 
+          </div>                    
+        {% endif %}
+
+        {% if LANGUAGE_CODE == "en" %}
+          <div class="section__content">
+            <p>{{ tour.description_en }}</p> 
+          </div>                    
+        {% endif %}
+
+        {% if LANGUAGE_CODE == "pt" %}
+          <div class="section__content">
+            <p>{{ tour.description_pt }}</p> 
+          </div>                    
+        {% endif %}
+          
+
+
 
         <div class="ed-item">
           <div class="ed-video">
@@ -79,16 +96,24 @@
 
 
       <section class="section">
-        <h2 class="section__title">PROGRAMACIÓN DEL TOUR</h2>
-        <span class="section__subtitle">Experiencia de clase mundial</span>
+        <h2 class="section__title">{% trans 'PROGRAMACIÓN DEL TOUR' %}</h2>
+        <span class="section__subtitle">{% trans 'Experiencia de clase mundial' %}</span>
         
         <div class="program-container">
           
           {% for item in itinerary %}
             <div class="program">
-              <span class="program__day">DIA {{ item.day }}</span>
+              <span class="program__day">{% trans 'DIA' %} {{ item.day }}</span>
               <H3 class="program__title">{{ item.title|upper }}</H3>
-              <p class="program__description">{{ item.description_es }}</p>
+              {% if LANGUAGE_CODE == "es" %}
+                <p class="program__description">{{ item.description_es }}</p>           
+              {% endif %}
+              {% if LANGUAGE_CODE == "en" %}
+                <p class="program__description">{{ item.description_en }}</p>           
+              {% endif %}
+              {% if LANGUAGE_CODE == "pt" %}
+                <p class="program__description">{{ item.description_pt }}</p>
+              {% endif %}
             </div>
             
           {% endfor %}
@@ -97,8 +122,8 @@
 
       <section class="ed-container">
         <section class="ed-item s-100 m-50 section">
-          <h2 class="section__title">INCLUYE</h2>
-          <span class="section__subtitle">Experiencia de clase mundial</span>
+          <h2 class="section__title">{% trans 'INCLUYE' %}</h2>
+          <span class="section__subtitle">{% trans 'Experiencia de clase mundial' %}</span>
           
           <ul class="list">
           
@@ -111,14 +136,13 @@
         </section>
         
         <section class="ed-item s-100 m-50 section">
-          <h2 class="section__title">NO INCLUYE</h2>
-          <span class="section__subtitle">Experiencia de clase mundial</span>
+          <h2 class="section__title">{% trans 'NO INCLUYE' %}</h2>
+          <span class="section__subtitle">{% trans 'Experiencia de clase mundial' %}</span>
           
           <ul class="list">
             
             {% for noInclude in tour.no_include.all %}
               <li class="list__item">{{ noInclude }}</li>
-              
             {% endfor %}
 
           </ul>
@@ -138,9 +162,18 @@
               <div class="gallery__item">
                 <img src="{{ photo.image.url }}" alt="" class="gallery__img--action">
                 <div class="gallery__info">
-                  <p class="gallery__price">STARTING PRICE ${{tour.price_sol }}</p>
-                  <span class="gallery__call">Compra este tour</span>
-                  <a href="#" class="gallery__btn">Comprar Ahora</a>
+
+                  <p class="gallery__price">
+                    {% trans 'STARTING PRICE' %} 
+                    {% if LANGUAGE_CODE == "es" %}
+                       S/ {{tour.price_sol }}
+                    {% else %}
+                       $ {{tour.price_dolar }}                      
+                    {% endif %}
+                  </p>
+                  
+                  <span class="gallery__call">{% trans 'Compra este tour' %}</span>
+                  <a href="#" class="gallery__btn">{% trans 'Comprar Ahora' %}</a>
                 </div>
               </div>
             {% else %}
