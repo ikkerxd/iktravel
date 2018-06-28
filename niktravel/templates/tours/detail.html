@@ -23,7 +23,7 @@
       <div class="banner">
         <img src="{{ tour.cover.url }}" alt="{{ tour.name }}" title="{{ tour.name }}" class="banner__img">
         <div class="banner__data">
-          <span class="banner__city">Perú {{ LANGUAGE_CODE }}, {{ tour.place }}</span>
+          <span class="banner__city">Perú, {{ tour.place }}</span>
           <h1 class="banner__title">{{ tour.name }}</h1>
         </div>
       </div>
@@ -96,7 +96,7 @@
 
 
       <section class="section">
-        <h2 class="section__title">{% trans 'PROGRAMACIÓN DEL TOUR' %}</h2>
+        <h2 class="section__title">{% trans 'ITINERARIO DEL TOUR' %}</h2>
         <span class="section__subtitle">{% trans 'Experiencia de clase mundial' %}</span>
         
         <div class="program-container">
@@ -123,7 +123,6 @@
       <section class="ed-container">
         <section class="ed-item s-100 m-50 section">
           <h2 class="section__title">{% trans 'INCLUYE' %}</h2>
-          <span class="section__subtitle">{% trans 'Experiencia de clase mundial' %}</span>
           
           <ul class="list">
           
@@ -137,7 +136,6 @@
         
         <section class="ed-item s-100 m-50 section">
           <h2 class="section__title">{% trans 'NO INCLUYE' %}</h2>
-          <span class="section__subtitle">{% trans 'Experiencia de clase mundial' %}</span>
           
           <ul class="list">
             
@@ -164,7 +162,7 @@
                 <div class="gallery__info">
 
                   <p class="gallery__price">
-                    {% trans 'STARTING PRICE' %} 
+                    {% trans 'PRECIO' %} 
                     {% if LANGUAGE_CODE == "es" %}
                        S/ {{tour.price_sol }}
                     {% else %}
@@ -172,7 +170,7 @@
                     {% endif %}
                   </p>
                   
-                  <span class="gallery__call">{% trans 'Compra este tour' %}</span>
+                  <span class="gallery__call">{% trans 'Compra este paquete' %}</span>
                   <a href="#" class="gallery__btn">{% trans 'Comprar Ahora' %}</a>
                 </div>
               </div>

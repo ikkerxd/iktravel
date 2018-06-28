@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-18 20:47-0500\n"
+"POT-Creation-Date: 2018-06-20 11:34-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,73 +18,178 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: niktravel/settings/base.py:97
+#: niktravel/settings/base.py:98
 msgid "Español"
 msgstr "Spanish"
 
-#: niktravel/settings/base.py:98
+#: niktravel/settings/base.py:99
 msgid "Ingles"
 msgstr "English"
 
 #: templates/home/index.html:26
-msgid ""
-"Mística ciudad sagrada, considerada la capital del Imperio Tahuantinsuyo con "
-"un gran legado histórico y arquitectónico. Rodeada de valles verdosos con "
-"imponentes atractivos turísticos, cultura, tradición y fe aún latente. "
-"Conocida como el ombligo del mundo por ser el centro político y territorial "
-"del Imperio Incaico, el departamento de Cusco nos muestra una impactante "
-"variedad geográfica desde naturales cordilleras y relieves, hasta ríos como "
-"el Urubamba."
-msgstr "the text is english por favor :("
+msgid "Falta descripcion"
+msgstr ""
 
-#: templates/home/index.html:32 templates/home/index.html:155
+#: templates/home/index.html:32
 msgid "MEJORES OFERTAS"
 msgstr "BEST OFFERS"
 
 #: templates/home/index.html:33
-msgid "mira nuestras mejores promociones en tours"
+#, fuzzy
+#| msgid "mira nuestras mejores promociones en tours"
+msgid "Mira nuestras mejores promociones en tours"
 msgstr "Check out our best promotion tours"
 
-#: templates/home/index.html:49
+#: templates/home/index.html:43 templates/home/index.html:55
+#: templates/home/index.html:175
 msgid "dia(s)"
 msgstr "day(s)"
 
-#: templates/home/index.html:54
-msgid "MAS INFORCIÓN"
-msgstr "MORE INFO"
+#: templates/home/index.html:61
+msgid "VER DETALLES"
+msgstr "SEE DETAILS"
 
-#: templates/home/index.html:126
+#: templates/home/index.html:134
 msgid "PORQUE ELEGIRNOS"
 msgstr "WHY CHOOSE US"
 
-#: templates/home/index.html:132 templates/home/index.html:139
-#: templates/home/index.html:146
-msgid "World Class Service"
-msgstr ""
+#: templates/home/index.html:140
+msgid "Calidad De Servicio"
+msgstr "Quality Service"
 
-#: templates/home/index.html:133
+#: templates/home/index.html:141
 msgid ""
 "Lorem ipsum dolor. Mollitia praesentium laborum omnis laudantium voluptatem "
 "inventore rerum aperiam saepe ipsum"
 msgstr ""
 
-#: templates/home/index.html:134 templates/home/index.html:141
-#: templates/home/index.html:148
-msgstr "more info"
-msgid "mas información"
+#: templates/home/index.html:142 templates/home/index.html:149
+#: templates/home/index.html:156
+#, fuzzy
+#| msgid "mas información"
+msgid "más información"
+msgstr "more information"
 
-#: templates/home/index.html:140
+#: templates/home/index.html:147
+msgid "Remposabilidad Social"
+msgstr "Social Responsibility"
+
+#: templates/home/index.html:148
 msgid ""
 "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia "
 "praesentium laborum omnis aperiam saepe ipsum"
 msgstr ""
 
-#: templates/home/index.html:147
+#: templates/home/index.html:154
+msgid "Mejores Precios Garantizados"
+msgstr "Best Price Guaranteed"
+
+#: templates/home/index.html:155
 msgid ""
 "Lorem ipsum dolor sit amet, consect adipiscing elit. Aenean commodo ligula "
 "eget dolor. Aenean massa"
 msgstr ""
 
-#: templates/home/index.html:156
-msgid "Mira nuestras tours mas recientes"
+#: templates/home/index.html:163
+msgid "NUESTROS PAQUETES TURÍSTICOS"
+msgstr "OUR TURISTIC PACKAGES"
+
+#: templates/home/index.html:164
+msgid "Escoge entre nuestros paquetes recomendados por nuestros clientes"
+msgstr "Choose among our tours packages by our customers"
+
+#: templates/include/header.html:15
+msgid "tours"
 msgstr ""
+
+#: templates/include/header.html:18
+msgid "paquetes"
+msgstr "packages"
+
+#: templates/include/header.html:21
+msgid "tours a machupicchu"
+msgstr "tours to machupicchu"
+
+#: templates/include/header.html:24
+msgid "acerca de nosotros"
+msgstr "about us"
+
+#: templates/include/header.html:27
+#, fuzzy
+#| msgid "Hola, INKATRAVEL tengo una consulta"
+msgid "Hola, INKA VIP TRAVEL tengo una consulta"
+msgstr "Hi, INKA VIP TRAVEL i have a query"
+
+#: templates/tours/detail.html:36
+msgid "DURACIÓN"
+msgstr "DURATION"
+
+#: templates/tours/detail.html:41 templates/tours/detail.html:166
+msgid "PRECIO"
+msgstr "PRICE"
+
+#: templates/tours/detail.html:46
+msgid "DISPONIBILIDAD"
+msgstr "AVAILABILITY"
+
+#: templates/tours/detail.html:49
+msgid "Consultar"
+msgstr "Consult"
+
+#: templates/tours/detail.html:51
+msgid "TODO EL AÑO"
+msgstr "ALL YEAR"
+
+#: templates/tours/detail.html:57
+msgid "COMPRAR"
+msgstr "BUY"
+
+#: templates/tours/detail.html:100
+msgid "ITINERARIO DEL TOUR"
+msgstr "TOUR ITINERARY"
+
+#: templates/tours/detail.html:101
+msgid "Experiencia de clase mundial"
+msgstr "World class experience"
+
+#: templates/tours/detail.html:107
+msgid "DIA"
+msgstr "DAY"
+
+#: templates/tours/detail.html:126
+msgid "INCLUYE"
+msgstr "INCLUDE"
+
+#: templates/tours/detail.html:139
+msgid "NO INCLUYE"
+msgstr "NO INCLUDE"
+
+#: templates/tours/detail.html:174
+msgid "Compra este paquete"
+msgstr "Buy This Package"
+
+#: templates/tours/detail.html:175
+msgid "Comprar Ahora"
+msgstr "Buy Now"
+
+#~ msgid "tours de 1 dia"
+#~ msgstr "full days"
+
+#~ msgid ""
+#~ "Mística ciudad sagrada, considerada la capital del Imperio Tahuantinsuyo "
+#~ "con un gran legado histórico y arquitectónico. Rodeada de valles verdosos "
+#~ "con imponentes atractivos turísticos, cultura, tradición y fe aún "
+#~ "latente. Conocida como el ombligo del mundo por ser el centro político y "
+#~ "territorial del Imperio Incaico, el departamento de Cusco nos muestra una "
+#~ "impactante variedad geográfica desde naturales cordilleras y relieves, "
+#~ "hasta ríos como el Urubamba."
+#~ msgstr "the text is english por favor :("
+
+#~ msgid "MAS INFORCIÓN"
+#~ msgstr "MORE INFO"
+
+#~ msgid "full day"
+#~ msgstr "full day"
+
+#~ msgid "Quienes somos"
+#~ msgstr "About us"

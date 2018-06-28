@@ -47,21 +47,3 @@ class NoInclude(TimeStampedModel):
     
     def __str__(self):
         return self.name
-
-
-class Country(TimeStampedModel):
-    """Model definition for Country."""
-
-    code = models.CharField('codigo', max_length=2, unique=True)
-    name = models.CharField('nombre', max_length=20)
-
-
-    class Meta:
-        """Meta definition for Country."""
-
-        verbose_name = 'Pais'
-        verbose_name_plural = 'Paises'
-
-    def __str__(self):
-        """Unicode representation of Country."""
-        return self.name

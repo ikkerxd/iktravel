@@ -1,5 +1,4 @@
 .main-nav {
-    @include edItem(100, 80);
     
     position: fixed;
     width:  $offcanvas-width;
@@ -11,7 +10,7 @@
     @include from(l) {
         position: static;
         background-color: transparent;
-        
+        flex: 1;
     }
 }
 
@@ -31,9 +30,20 @@
          }
     }
 
+    &__item--phone {
+        background-color: #fff;
+        color: red;
+        border-radius: 25px;
+    }
+
+    &__link--phone {
+        
+    }
+
     &__link {
         display: block;
         padding: 1em 1em;
+        color: #ffF;
         font-weight: $regular;
         text-transform: capitalize;
         color: lighten($secundary, 50%);
@@ -43,7 +53,6 @@
         @include from(l) {
             display: inline;
             padding: 0;
-            color: #ffF;
             text-transform: uppercase;
             display: inline;
             border-bottom: none;

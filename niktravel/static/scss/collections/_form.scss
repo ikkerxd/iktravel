@@ -1,0 +1,17 @@
+.form-language {
+}
+
+.select__language {
+    appearance: none;
+
+    display: block;
+    background-color: inherit;
+    color: #fff;
+    padding: 4px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    & option {
+        background-color: transparent;
+        color: #000;
+    }
+}

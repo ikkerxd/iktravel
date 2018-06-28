@@ -1,5 +1,4 @@
 .toggle-menu {
-    @include edItem(20);
     cursor: pointer;
     @include from(l){
         display: none;

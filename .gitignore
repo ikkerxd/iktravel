@@ -184,8 +184,8 @@ venv.bak/
 
 niktravel/secrets.json
 
-*migrations/*
+**/migrations/**
+!**/migrations
 !__init__.py
 
-applications/home/migrations/
-applications/home/migrations/*
+0001_initial.py
