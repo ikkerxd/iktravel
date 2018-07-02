@@ -43,8 +43,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR.child('staticfiles')
-STATICFILES_DIRS = [BASE_DIR.child('static')]
+STATIC_ROOT = BASE_DIR.child('static')
+STATICFILES_DIRS = [BASE_DIR.child('staticfiles')]
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR.child('media')
