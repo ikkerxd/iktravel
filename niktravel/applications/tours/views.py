@@ -23,10 +23,6 @@ class TourDetailView(DetailView):
         itinerary = Itinerary.objects.filter(tour=self.object)
         gallery = Photo.objects.filter(tour=self.object)
 
-        print("-=======================================")
-        print(gallery.count())
-        print(gallery)
-
         context['itinerary'] = itinerary
         context['gallery'] = gallery
         return context
