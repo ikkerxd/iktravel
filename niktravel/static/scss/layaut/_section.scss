@@ -27,6 +27,10 @@
     }
 }
 
+.section--full {
+    @include full;
+}
+
 .section--paralax {
     @include edContainer;
     @include full;

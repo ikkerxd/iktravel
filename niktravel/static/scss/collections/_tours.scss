@@ -99,6 +99,11 @@
     }
     &__item {
         padding: $line-height/4;
+        &::before {
+            content: '✓';
+            padding-right: 5px;
+            font-weight: $regular;
+        }
     }
 }
 

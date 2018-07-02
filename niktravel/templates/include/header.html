@@ -5,8 +5,8 @@
         <div class="toggle-menu" id="toogle-menu">
             <span class="bar" aria-hidden="true"></span>
         </div>
-        <a href="#" class="logo-header">
-            Inkatravel vip
+        <a href="{% url 'home_app:index' %}" class="logo-header">
+            Inka Vip Travel
             <!-- <img src="#" alt="inka travel vip" class="logo__header"> -->
         </a>
         <nav class="main-nav">
@@ -25,7 +25,7 @@
                 </li>
                 <li class="main-menu__item--phone">
                     <a href="https://api.whatsapp.com/send?phone=51964336835&text={% trans 'Hola, INKA VIP TRAVEL tengo una consulta' %}" class="main-menu__link--phone">
-                        <span class="icon-whatsapp"></span> +51 964336835
+                        <span class="icon-whatsapp"></span> +51 964-336-835
                     </a>
                 </li>
             </ul>
@@ -43,9 +43,5 @@
                 {% endfor %}
             </select>
         </form>
-
     </div>
-    
-
-
 </header>

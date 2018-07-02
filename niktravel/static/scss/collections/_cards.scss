@@ -4,6 +4,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+    padding-top: $line-height;
 
     grid-template-columns: 1fr;
     grid-gap: $gutter * 3.5;
@@ -55,6 +56,7 @@
     &__title {
         font-size: $t3;
         font-weight: $regular;
+        margin-bottom: $line-height * 0.5;
         @include from(m){
             font-size: $base;
         }

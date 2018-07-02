@@ -64,69 +64,6 @@
             </div>            
           {% endfor %}
 
-          <div class="tour">
-            <img src="{% static 'img/nazca.jpg' %}" alt="" class="tour__img">
-            
-            <span class="tour__city">ICA</span>
-            <span class="tour__day">5 dias</span>
-            <h3 class="tour__title">lineas de nazca</h3>
-            <span class="tour__cost">$ 300</span>
-            <ul class="tour-detail">
-              <li class="tour-detail__item">4-5 dias</li>
-              <li class="tour-detail__item">Visistar centro arqueoligicos</li>
-              <li class="tour-detail__item">vsitar muchupicchu</li>
-              <li class="tour-detail__item">100% satisfacion Garantisada.</li>
-            </ul>
-            <div class="tour__footer">
-              <a href="#" class="tour__btn">MAS INFORCIÓN...</a>
-            </div>
-          </div>
-
-          <div class="tour">
-            <img src="{% static 'img/huacachina.jpg' %}" alt="" class="tour__img">
-            
-            <span class="tour__city">ICA</span>
-            <span class="tour__day">8 dias</span>
-            <h3 class="tour__title">Huacachina</h3>
-            <span class="tour__cost">$ 400</span>
-            <ul class="tour-detail">
-              <li class="tour-detail__item">4-5 dias</li>
-              <li class="tour-detail__item">Visistar centro arqueoligicos</li>
-              <li class="tour-detail__item">vsitar muchupicchu</li>
-              <li class="tour-detail__item">100% satisfacion Garantisada.</li>
-            </ul>
-          </div>
-
-          <div class="tour">
-            <img src="{% static 'img/peru-cusco.jpg' %}" alt="" class="tour__img">
-            
-            <span class="tour__city">CUSCO</span>
-            <span class="tour__day">8 dias</span>
-            <h3 class="tour__title">Plaza de armas</h3>
-            <span class="tour__cost">$ 800</span>
-            <ul class="tour-detail">
-              <li class="tour-detail__item">4-5 dias</li>
-              <li class="tour-detail__item">Visistar centro arqueoligicos</li>
-              <li class="tour-detail__item">vsitar muchupicchu</li>
-              <li class="tour-detail__item">100% satisfacion Garantisada.</li>
-            </ul>
-          </div>
-
-          <div class="tour">
-            <img src="{% static 'img/machu-picchu.jpg' %}" alt="" class="tour__img">
-            
-            <span class="tour__day">8 dias</span>
-            <h3 class="tour__title">valle sagrado de los incas</h3>
-            <span class="tour__cost">$ 800</span>
-            <ul class="tour-detail">
-            <span class="tour__city">CUSCO</span>
-              <li class="tour-detail__item">4-5 dias</li>
-              <li class="tour-detail__item">Visistar centro arqueoligicos</li>
-              <li class="tour-detail__item">vsitar muchupicchu</li>
-              <li class="tour-detail__item">100% satisfacion Garantisada.</li>
-            </ul>
-          </div>
-
         </div>
       </section>
 
@@ -159,7 +96,7 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section full">
         <h2 class="section__title">{% trans 'NUESTROS PAQUETES TURÍSTICOS' %}</h2>
         <span class="section__subtitle">{% trans 'Escoge entre nuestros paquetes recomendados por nuestros clientes' %}</span>
         
@@ -188,55 +125,13 @@
             
           {% endfor %}
 
-          <div class="tour--new">
-              <img src="{% static 'img/peru-cusco.jpg' %}" alt="" class="tour--new__img">
-              
-              <div class="tour--new__info">
-                <span class="tour--new__city">CUSCO</span>
-                <span class="tour--new__day">8 dias</span>
-                <h3 class="tour--new__title">valle sagrado de los incas</h3>
-                <span class="tour--new__cost">$ 800</span>
-              </div>  
-            </div>
-          
-            <div class="tour--new">
-                <img src="{% static 'img/machu-picchu.jpg' %}" alt="" class="tour--new__img">
-                
-                <div class="tour--new__info">
-                  <span class="tour--new__city">CUSCO</span>
-                  <span class="tour--new__day">8 dias</span>
-                  <h3 class="tour--new__title">valle sagrado de los incas</h3>
-                  <span class="tour--new__cost">$ 800</span>
-                </div>  
-              </div>
-          <div class="tour--new">
-            <img src="{% static 'img/machu-picchu.jpg' %}" alt="" class="tour--new__img">
-            
-            <div class="tour--new__info">
-              <span class="tour--new__city">CUSCO</span>
-              <span class="tour--new__day">8 dias</span>
-              <h3 class="tour--new__title">valle sagrado de los incas</h3>
-              <span class="tour--new__cost">$ 800</span>
-            </div>  
-          </div>
-
-          <div class="tour--new">
-            <img src="{% static 'img/huacachina.jpg' %}" alt="" class="tour--new__img">
-            
-            <div class="tour--new__info">
-              <span class="tour--new__city">CUSCO</span>
-              <span class="tour--new__day">8 dias</span>
-              <h3 class="tour--new__title">valle sagrado de los incas</h3>
-              <span class="tour--new__cost">$ 800</span>
-            </div>  
-          </div>
-
-
         </div>
 
       </section>
     </main>
+
     {% include "include/footer.html" %}
+
   </div>
 
 {% endblock %}

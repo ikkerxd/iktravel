@@ -22,22 +22,29 @@
     @include from(l) {
         display: flex;
         justify-content: flex-end;
+        align-items: baseline;
     }
     
     &__item, &__item--phone{
          @include from(l) {
-            padding: 1em 1em;
+            padding: 0 .5em;
          }
     }
 
     &__item--phone {
         background-color: #fff;
-        color: red;
         border-radius: 25px;
     }
 
     &__link--phone {
-        
+        color: #222;
+        font-weight: $regular;
+        font-size: .9em;
+        padding: .4em .2em;
+        display: block;
+        &:hover {
+            text-decoration: none;
+        }
     }
 
     &__link {
@@ -46,7 +53,6 @@
         color: #ffF;
         font-weight: $regular;
         text-transform: capitalize;
-        color: lighten($secundary, 50%);
         border-bottom: 1px solid lighten($secundary, 10%);
         font-size: .85em;
         cursor: pointer;

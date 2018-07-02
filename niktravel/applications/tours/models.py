@@ -9,13 +9,20 @@ from django.db import models
 from django.template.defaultfilters import slugify
 
 # local
-from applications.miscelanea.models import Category, Include, NoInclude
+from applications.miscelanea.models import Category, Include, NoInclude, Recommendation
 
 
 class Tour(TimeStampedModel):
     """Model definition for Tour."""
 
+    TYPE_TOUR = 'T'
+    TYPE_PACKAGE = 'P'
+    TYPE_CHOICES = (
+        (TYPE_TOUR, 'Tour'),
+        (TYPE_PACKAGE, 'Paquete'),
+    )
     name = models.CharField('nombre', max_length=80) # Nombre del tour
+    type_tour = models.CharField('tipo', max_length=1, choices=TYPE_CHOICES) # Tipo de tour 
     place  = models.CharField('lugar', max_length=50) # Lugar del tour
     duration = models.IntegerField('duracion') # duracion en dias U horas del tour
     cover = models.ImageField('portada', upload_to='portada') # portada del tour
@@ -30,7 +37,7 @@ class Tour(TimeStampedModel):
         default=0
     ) # Precio en soles del tour
     price_des_sol = models.DecimalField(
-        'precio en con descuento soles',
+        'precio con descuento en soles',
         blank=True,
         null=True,
         max_digits=6,
@@ -64,8 +71,12 @@ class Tour(TimeStampedModel):
         NoInclude,
         verbose_name='que no incluye',
     ) # Servisios q no incluye el tour
+    recommendation = models.ManyToManyField(
+        Recommendation,
+        verbose_name='recomendaciones',
+    ) # Servisios q no incluye el tour
     slug = models.SlugField(editable=False, max_length=200)
-    
+
     class Meta:
         """Meta definition for Tour."""
 

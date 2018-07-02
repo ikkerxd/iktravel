@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-20 11:34-0500\n"
+"POT-Creation-Date: 2018-07-02 07:23-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,7 +41,7 @@ msgid "Mira nuestras mejores promociones en tours"
 msgstr "Check out our best promotion tours"
 
 #: templates/home/index.html:43 templates/home/index.html:55
-#: templates/home/index.html:175
+#: templates/home/index.html:112
 msgid "dia(s)"
 msgstr "day(s)"
 
@@ -49,52 +49,52 @@ msgstr "day(s)"
 msgid "VER DETALLES"
 msgstr "SEE DETAILS"
 
-#: templates/home/index.html:134
+#: templates/home/index.html:71
 msgid "PORQUE ELEGIRNOS"
 msgstr "WHY CHOOSE US"
 
-#: templates/home/index.html:140
+#: templates/home/index.html:77
 msgid "Calidad De Servicio"
 msgstr "Quality Service"
 
-#: templates/home/index.html:141
+#: templates/home/index.html:78
 msgid ""
 "Lorem ipsum dolor. Mollitia praesentium laborum omnis laudantium voluptatem "
 "inventore rerum aperiam saepe ipsum"
 msgstr ""
 
-#: templates/home/index.html:142 templates/home/index.html:149
-#: templates/home/index.html:156
+#: templates/home/index.html:79 templates/home/index.html:86
+#: templates/home/index.html:93
 #, fuzzy
 #| msgid "mas información"
 msgid "más información"
 msgstr "more information"
 
-#: templates/home/index.html:147
+#: templates/home/index.html:84
 msgid "Remposabilidad Social"
 msgstr "Social Responsibility"
 
-#: templates/home/index.html:148
+#: templates/home/index.html:85
 msgid ""
 "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia "
 "praesentium laborum omnis aperiam saepe ipsum"
 msgstr ""
 
-#: templates/home/index.html:154
+#: templates/home/index.html:91
 msgid "Mejores Precios Garantizados"
 msgstr "Best Price Guaranteed"
 
-#: templates/home/index.html:155
+#: templates/home/index.html:92
 msgid ""
 "Lorem ipsum dolor sit amet, consect adipiscing elit. Aenean commodo ligula "
 "eget dolor. Aenean massa"
 msgstr ""
 
-#: templates/home/index.html:163
+#: templates/home/index.html:100
 msgid "NUESTROS PAQUETES TURÍSTICOS"
 msgstr "OUR TURISTIC PACKAGES"
 
-#: templates/home/index.html:164
+#: templates/home/index.html:101
 msgid "Escoge entre nuestros paquetes recomendados por nuestros clientes"
 msgstr "Choose among our tours packages by our customers"
 
@@ -124,7 +124,7 @@ msgstr "Hi, INKA VIP TRAVEL i have a query"
 msgid "DURACIÓN"
 msgstr "DURATION"
 
-#: templates/tours/detail.html:41 templates/tours/detail.html:166
+#: templates/tours/detail.html:41 templates/tours/detail.html:183
 msgid "PRECIO"
 msgstr "PRICE"
 
@@ -144,31 +144,46 @@ msgstr "ALL YEAR"
 msgid "COMPRAR"
 msgstr "BUY"
 
-#: templates/tours/detail.html:100
+#: templates/tours/detail.html:68
+#, python-format
+msgid ""
+"\n"
+"          Experiencia en %(duration)s dia(s) de viaje\n"
+"        "
+msgstr 
+"\n"
+"Experience in %(duration)s day(s) of travel"
+"        "
+
+#: templates/tours/detail.html:104
 msgid "ITINERARIO DEL TOUR"
 msgstr "TOUR ITINERARY"
 
-#: templates/tours/detail.html:101
+#: templates/tours/detail.html:105
 msgid "Experiencia de clase mundial"
 msgstr "World class experience"
 
-#: templates/tours/detail.html:107
+#: templates/tours/detail.html:111
 msgid "DIA"
 msgstr "DAY"
 
-#: templates/tours/detail.html:126
+#: templates/tours/detail.html:130
 msgid "INCLUYE"
 msgstr "INCLUDE"
 
-#: templates/tours/detail.html:139
+#: templates/tours/detail.html:143
 msgid "NO INCLUYE"
 msgstr "NO INCLUDE"
 
-#: templates/tours/detail.html:174
+#: templates/tours/detail.html:156
+msgid "RECOMEDACIONES"
+msgstr ""
+
+#: templates/tours/detail.html:191
 msgid "Compra este paquete"
 msgstr "Buy This Package"
 
-#: templates/tours/detail.html:175
+#: templates/tours/detail.html:192
 msgid "Comprar Ahora"
 msgstr "Buy Now"
 

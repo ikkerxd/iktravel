@@ -25,12 +25,12 @@ class PhotoInline(admin.TabularInline):
 @admin.register(Tour)
 class TourAdmin(admin.ModelAdmin):
 
-    filter_horizontal = ('include','no_include')
+    filter_horizontal = ('include','no_include', 'recommendation')
     inlines = [PhotoInline, ItineraryInline]
     fieldsets = (
         ('Información del tour', {
             'fields': (
-                'name', 'place', 'duration', 'description_es', 'description_en', 'description_pt',
+                'name', 'place', 'type_tour', 'duration', 'description_es', 'description_en', 'description_pt',
             ),
         }),
         ('Multimedia del tour', {
@@ -45,7 +45,7 @@ class TourAdmin(admin.ModelAdmin):
         }),
         ('Opciones del tour', {
             'fields': (
-                'category', 'include','no_include',
+                'category', 'include','no_include', 'recommendation',
             ),
         }),
     )
