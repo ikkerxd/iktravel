@@ -15,7 +15,15 @@ let postcssPlugins = [
     browsers: 'last 3 versions',
     cascade: true
   }),
-  //cssnano({core:true})
+  cssnano({
+    zindex:false,
+    colormin: {
+      legacy: true,
+    },
+    discardComments: {
+      removeAll: true,
+    },
+  })
 ];
 
 let sassOptions = {
