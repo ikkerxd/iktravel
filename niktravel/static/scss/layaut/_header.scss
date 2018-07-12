@@ -1,4 +1,4 @@
-.header {
+%header {
     position: absolute;
     left: 0;
     right: 0;
@@ -7,7 +7,20 @@
     background-color:transparent;
     align-items: center;
     z-index: $z-header;
+}
+.header {
+    @extend %header;
 
+    &--secondary {
+        @extend %header;
+        @include full;
+        background-color: #000;
+        position: relative;
+        
+        .header-container {
+            @include edContainer;
+        }
+    }
     &-container {
         @include edItem;
         display: flex;

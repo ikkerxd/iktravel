@@ -1,6 +1,6 @@
 {% load i18n %}
 
-<header class="header">
+<header class="{% if header is None %}header{% else %}header--{{ header }}{% endif %}">
     <div class="header-container">
         <div class="toggle-menu" id="toogle-menu">
             <span class="bar" aria-hidden="true"></span>

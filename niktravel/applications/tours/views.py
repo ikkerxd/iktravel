@@ -1,10 +1,14 @@
 # django
-from django.views.generic import DetailView
+from django.views.generic import DetailView, FormView, TemplateView
+from django.views.generic.detail import SingleObjectMixin
+from django.urls import reverse
 
 # local
-from .models import Tour
 from applications.galeria.models import Photo
 from applications.itinerario.models import Itinerary
+from .models import Tour
+
+from .forms import CartForm
 
 # Create your views here.
 
@@ -25,4 +29,46 @@ class TourDetailView(DetailView):
 
         context['itinerary'] = itinerary
         context['gallery'] = gallery
+        return context
+
+
+class CartView(SingleObjectMixin, FormView):
+    '''
+    Carrito de compra del tour
+    '''
+    model = Tour
+    template_name = "tours/cart.html"
+    context_object_name = 'tour'
+    form_class = CartForm
+
+    def get(self, *args, **kwargs):
+        self.object = self.get_object()
+        return super().get(*args, **kwargs)
+
+    def post(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        # creamos una session para poder mandar el valor de la cantidad a otra vista
+        request.session['quantity'] = request.POST['quantity']
+        return super().post(request, *args, **kwargs)
+
+    def get_success_url(self):
+        return reverse(
+            'tours_app:payment',
+            kwargs={
+                'category': self.object.category,
+                'slug': self.object.slug,
+            }
+        )
+
+
+class PaymentView(TemplateView):
+    template_name = "tours/payment.html"
+
+    
+    def get_context_data(self, **kwargs):
+        context = super(PaymentView, self).get_context_data(**kwargs)
+        print('______________________session____________________________')
+        print(self.request.session['quantity'])
+
+        print(kwargs)
         return context

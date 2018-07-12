@@ -1,0 +1,40 @@
+.order {
+    @include edItem(100,25);
+    background-color: #dee3ef;
+    padding: $gutter*0.5  $gutter;
+    font-size: $s1;
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        padding-bottom: $gutter*0.5;
+        border-bottom: 1px solid darken(#dee3df, 20%);
+        margin-bottom: $gutter*0.5;
+        font-weight: $regular;
+        text-transform: uppercase;
+        font-size: $s1;
+        color: $primary;
+
+    }
+    &__count, &__total {
+        margin-bottom: $gutter;
+        font-weight: $regular;
+
+        span {
+            font-size: $base;
+            font-weight: $light;
+            margin-left: 8px;
+        }
+    }
+    &__count {
+        
+    }
+    &__total {
+        flex-grow: 1;
+    }
+    &__btn {
+        @include edgridButton($primary, #fff);
+        margin-bottom: $gutter;
+        text-transform: uppercase;
+    }
+}
