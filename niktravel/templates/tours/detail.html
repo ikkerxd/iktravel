@@ -38,7 +38,22 @@
 
             <div class="package__box">
                 <span class="package__label">{% trans 'PRECIO' %}</span>
-                <span class="package__content">$.{{ tour.price_sol }}</span>
+                <div class="package__content">
+                  <span class="package__cost-normal">
+                      {% if  LANGUAGE_CODE == "es" %}
+                        S/ {{ tour.price_sol }}
+                        {% else %}
+                        $ {{ tour.price_dolar }}
+                      {% endif %}
+                    </span>
+                    <span class="package__cost-des">
+                      {% if  LANGUAGE_CODE == "es" %}
+                        S/ {{ tour.price_des_sol }}
+                      {% else %}
+                        $ {{ tour.price_des_dolar }}
+                      {% endif %}
+                    </span>
+                </div>
             </div>
 
             <div class="package__box">
@@ -178,14 +193,25 @@
                 <img src="{{ photo.image.url }}" alt="" class="gallery__img--action">
                 <div class="gallery__info">
 
-                  <p class="gallery__price">
+                  <div class="gallery__price">
                     {% trans 'PRECIO' %} 
-                    {% if LANGUAGE_CODE == "es" %}
-                       S/ {{tour.price_sol }}
-                    {% else %}
-                       $ {{tour.price_dolar }}                      
-                    {% endif %}
-                  </p>
+                    <span class="gallery__price-normal">
+                      {% if LANGUAGE_CODE == "es" %}
+                         S/ {{tour.price_sol }}
+                      {% else %}
+                         $ {{tour.price_dolar }}                      
+                      {% endif %}
+                      
+                    </span>
+                    <span class="gallery__price-des">
+                      {% if LANGUAGE_CODE == "es" %}
+                         S/ {{tour.price_des_sol }}
+                      {% else %}
+                         $ {{tour.price_des_dolar }}                      
+                      {% endif %}
+                      
+                    </span>
+                  </div>
                   
                   <span class="gallery__call">{% trans 'Compra este paquete' %}</span>
                   <a href="{% url 'tours_app:cart' tour.category tour.slug %}" class="gallery__btn">{% trans 'Comprar Ahora' %}</a>

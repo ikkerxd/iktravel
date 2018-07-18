@@ -71,6 +71,16 @@
     &__price {
         font-size: $s1;
         font-style: italic;
+        margin: $line-height*0.5;
+        &-normal {
+            font-size: $s2*1.35;
+            margin: 0 5px;
+
+            text-decoration: line-through;
+        }
+        &-des {
+            color: $primary;
+        }
     }
     &__call {
         @extend %title2;

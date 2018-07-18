@@ -35,6 +35,15 @@
     &__content {
         font-size: $t3;
     }
+    &__cost-normal {
+        font-size: $base;
+        color: #666;
+        text-decoration: line-through;
+    }
+    &__cost-des {
+        color: $primary;
+        margin-left: $gutter;
+    }
     &__btn {
         @include edgridButton(#2980b9,#fff, round);
     }

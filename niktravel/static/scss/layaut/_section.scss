@@ -18,6 +18,16 @@
         @include from(m) {
             padding-bottom: $line-height*2.5;            
         }
+        &--left {
+            @include edItem;
+            color: black;
+            text-align: left;
+            padding-bottom: $line-height*1.5;
+            font-style: italic;
+            @include from(m) {
+                padding-bottom: $line-height*2.5;            
+            }
+        }
     }
     &__content {
         @include edItem(100);
@@ -36,10 +46,19 @@
     justify-content: space-between;
 }
 
+.section--payment {
+    @include from(m) {
+        max-width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
 .section--paralax {
     @include edContainer;
     @include full;
-    flex-direction: column;
+    flex-direction: row;
     margin-top: $line-height*2;
     padding-bottom: $line-height*5;
     background-image: url("../img/machu-picchu-2.jpg");

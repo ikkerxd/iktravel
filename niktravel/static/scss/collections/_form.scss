@@ -16,3 +16,62 @@
         color: #000;
     }
 }
+
+.form--info {
+    @include edItem;
+    @include from(m) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 0 $gutter;   
+    }
+    
+}
+
+.form {
+    &__group {
+        display: flex;
+        flex-direction: column;
+        font-size: $s1;
+        margin-bottom: $gutter;
+
+        label {
+            font-weight: $regular;
+            margin-bottom: $gutter*0.5;
+            color: darken(#dee3df, 60%);
+        }
+    }
+    &__input {
+        border-radius: 5px;
+        height: $line-height*2.3;
+        padding: 5px 5px;
+        border: 1px solid #dee3df;
+        background-color: #fff;
+    }
+    &__btn {
+        display: block;
+        background-image: url('../img/paypal-logo.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: #fff;
+        background-origin: content-box;
+        height: $line-height*3;
+        padding: 10px 8px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        border-radius: 8px;
+        border: 1px solid #2ecc71;
+        cursor: pointer;
+        transition: all .6s;
+
+        @include from(m) {
+            width: 40%;
+            margin: 0;
+
+            &:hover {
+                border: 1.3px solid #2ecc71;
+
+            }
+        }
+    }
+}

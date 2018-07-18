@@ -1,0 +1,15 @@
+.payment-method {
+    @include edItem;
+    display: flex;
+    flex-direction: column;
+    @include from(m) {
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+    &__title {
+        color: darken(#dee3df, 60%);
+        border-bottom: 1px solid #dee3df;
+        padding-bottom: $gutter*0.5;
+    } 
+}

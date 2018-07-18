@@ -61,14 +61,35 @@ class CartView(SingleObjectMixin, FormView):
         )
 
 
-class PaymentView(TemplateView):
+class PaymentView(SingleObjectMixin, FormView):
+    model = Tour
     template_name = "tours/payment.html"
+    context_object_name = 'tour'
+    form_class = CartForm
 
-    
     def get_context_data(self, **kwargs):
         context = super(PaymentView, self).get_context_data(**kwargs)
         print('______________________session____________________________')
-        print(self.request.session['quantity'])
-
-        print(kwargs)
+        quantity = self.request.session.get('quantity')
+        price = self.object.price_des_dolar
+        print(type(quantity))
+        print(type(price))
+        print(price)
+        print(quantity)
+        total = int(quantity) * price
+        print(total)
+        context['quantity'] = quantity
+        context['total'] = total
         return context
+
+    def get(self, *args, **kwargs):
+        self.object = self.get_object()
+        return super().get(*args, **kwargs)
+
+    def post(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        return super().post(request, *args, **kwargs)
+    
+    def get_absolute_url(self):
+        from django.core.urlresolvers import reverse
+        return reverse('/', kwargs={'pk': self.pk})

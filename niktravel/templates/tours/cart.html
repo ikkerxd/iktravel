@@ -32,11 +32,11 @@
       </section>
       <section class="section section--cart">
         <div class="table">
-          <span class="table-header">Nombre del Tour</span>
-          <span class="table-header">Cantidad</span>
-          <span class="table-header">Precio</span>
+          <span class="table-header">Tour</span>
+          <span class="table-header">{% trans 'Cantidad' %}</span>
+          <span class="table-header">{% trans 'Precio' %}</span>
           <span class="table-header">Total</span>
-          <span class="table-header">Acción</span>
+          <span class="table-header">{% trans '' %}</span>
 
           <div class="table-content__tour">
             <img src="{{ tour.cover.url }}" alt="" class="table-tour__img">
@@ -53,15 +53,36 @@
             {{ form.quantity }}
             </form>
           </div>
-          <div id="cartPrice" class="table-content__price">{{ tour.price_des_sol }}</div>
-          <div id="cartTotal" class="table-content__total">{{ tour.price_des_sol }}</div>
+          <div id="cartPrice" class="table-content__price">
+            {% if LANGUAGE_CODE == "es" %}
+              {{ tour.price_des_sol }}
+            {% else %}
+              {{ tour.price_des_dolar }}
+            {% endif %}
+              
+          </div>
+          <div id="cartTotal" class="table-content__total">
+              {% if LANGUAGE_CODE == "es" %}
+                {{ tour.price_des_sol }}
+              {% else %}
+                {{ tour.price_des_dolar }}
+              {% endif %}
+          </div>
           <div class="table-content__remove"><a href="{% url 'home_app:index' %}">remover</a></div>
         </div>
 
         <div class="order">
           <h3 class="order__title">Resumen De Tu Pedido</h3>
           <div class="order__count">Viajeros: <span id="orderQuantity">1</span></div>
-          <div class="order__total">Costo Total: <span id="orderTotal">S/ {{ tour.price_des_sol }}</span></div>
+          <div class="order__total">Costo Total: 
+            <span id="orderTotal">
+                {% if LANGUAGE_CODE == "es" %}
+                  S/ {{ tour.price_des_sol }}
+                {% else %}
+                  $ {{ tour.price_des_dolar }}
+                {% endif %}
+            </span>
+          </div>
           <button id="orderBtn" class="order__btn">Procesar compra</button>
         </div>
       

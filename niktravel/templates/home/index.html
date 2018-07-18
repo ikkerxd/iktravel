@@ -41,14 +41,22 @@
               <h3 class="tour__title">{{ oferta.name|title }}</h3>
               <span class="tour__city">{{ oferta.place }}</span>
               <span class="tour__day">{{ oferta.duration }} {% trans 'dia(s)' %}</span>
-              <span class="tour__cost">
-                {% if  LANGUAGE_CODE == "es" %}
-                  S/ {{ oferta.price_sol }}
-                {% else %}
-                  $ {{ oferta.price_dolar }}
-                {% endif %}
-                  
-              </span>
+              <div class="tour__cost">
+                <span class="tour__cost-normal">
+                  {% if  LANGUAGE_CODE == "es" %}
+                    S/ {{ oferta.price_sol }}
+                  {% else %}
+                    $ {{ oferta.price_dolar }}
+                  {% endif %}
+                </span>
+                <span class="tour__cost-des">
+                  {% if  LANGUAGE_CODE == "es" %}
+                    S/ {{ oferta.price_des_sol }}
+                  {% else %}
+                    $ {{ oferta.price_des_dolar }}
+                  {% endif %}
+                </span>
+              </div>
               <ul class="tour-detail">
 
                 {% for detail in oferta.include.all|slice:"4" %}
@@ -111,14 +119,23 @@
                   <span class="tour--new__city">{{ tour.place }}</span>
                   <span class="tour--new__day">{{ tour.duration }} {% trans 'dia(s)' %}</span>
                   <h3 class="tour--new__title">{{ tour.name|truncatechars:25 }}</h3>
-                  <span class="tour--new__cost">
-                  {% if  LANGUAGE_CODE == "es" %}
-                    S/ {{ tour.price_sol }}
-                  {% else %}
-                    $ {{ tour.price_dolar }}
-                  {% endif %}
-                  
-                  </span>
+                  <div class="tour--new__cost">
+                      <span class="tour--new__cost-normal">
+                        {% if  LANGUAGE_CODE == "es" %}
+                          S/ {{ tour.price_sol }}
+                        {% else %}
+                          $ {{ tour.price_dolar }}
+                        {% endif %}
+                      </span>
+                      <span class="tour--new__cost-des">
+                        {% if  LANGUAGE_CODE == "es" %}
+                          S/ {{ tour.price_des_sol }}
+                        {% else %}
+                          $ {{ tour.price_des_dolar }}
+                        {% endif %}
+                        
+                      </span>
+                    </div>
                 </div>  
               </a>
             </div>

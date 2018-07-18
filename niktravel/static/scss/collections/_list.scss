@@ -1,9 +1,29 @@
-.list {
+%list {
     padding-left: $gutter;
     font-size: $s1;
     color: #333;
     margin-bottom: 0;
+
+}
+.list {
+    @extend %list;
     &__item {
-        padding-bottom: $line-height*0.5;    
+        padding-bottom: $line-height*0.5;
+        span {
+            color: $primary;
+            font-weight: $regular;
+        }
+        &__small {
+            padding-bottom: $line-height*0.5;
+            font-size: $s3;
+
+        }    
+    }
+
+    &--payment {
+        @extend %list;
+        list-style: none;
+        margin-bottom: $gutter;
     }
 }
+

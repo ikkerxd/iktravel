@@ -62,13 +62,14 @@
         }
     }
     &__description {
+        font-size: $base*0.8;
         color: #666;
         line-height: 1.65;
         flex: 1;
 
         @include from(m) {
             line-height: 1.5;            
-            font-size: 0.87em;           
+            font-size: 0.8em;           
         }
     }
     &__link {
