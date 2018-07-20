@@ -68,7 +68,7 @@
             </div>
 
             <div class="package__box">
-                <a href="{% url 'tours_app:cart' tour.category tour.slug %}" class="package__btn">{% trans 'COMPRAR' %}</a>
+                <a href="{% url 'tours_app:cart' tour.category|slugify tour.slug %}" class="package__btn">{% trans 'COMPRAR' %}</a>
             </div>
 
           </div>
@@ -214,7 +214,7 @@
                   </div>
                   
                   <span class="gallery__call">{% trans 'Compra este paquete' %}</span>
-                  <a href="{% url 'tours_app:cart' tour.category tour.slug %}" class="gallery__btn">{% trans 'Comprar Ahora' %}</a>
+                  <a href="{% url 'tours_app:cart' tour.category|slugify tour.slug %}" class="gallery__btn">{% trans 'Comprar Ahora' %}</a>
                 </div>
               </div>
             {% else %}

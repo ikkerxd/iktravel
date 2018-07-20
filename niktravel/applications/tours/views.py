@@ -3,6 +3,7 @@ from django.views.generic import DetailView, FormView, TemplateView
 from django.views.generic.detail import SingleObjectMixin
 from django.urls import reverse
 from django.shortcuts import redirect
+from django.template.defaultfilters import slugify
 
 # local
 from applications.galeria.models import Photo
@@ -58,7 +59,7 @@ class CartView(SingleObjectMixin, FormView):
         return reverse(
             'tours_app:payment',
             kwargs={
-                'category': self.object.category,
+                'category': slugify(self.object.category),
                 'slug': self.object.slug,
             }
         )
