@@ -65,7 +65,7 @@
 
               </ul>
               <div class="tour__footer">
-                <a href="{% url 'tours_app:detail' oferta.category oferta.slug %}" class="tour__btn">
+                <a href="{% url 'tours_app:detail' oferta.category|slugify oferta.slug %}" class="tour__btn">
                   {% trans 'VER DETALLES' %}
                 </a>
               </div>
@@ -114,7 +114,7 @@
             <div class="tour--new">
               <img src="{{ tour.cover.url }}" alt="{{ tour.name }}" title="{{ tour.name }}" class="tour--new__img">
               
-              <a href="{% url 'tours_app:detail' tour.category tour.slug %}">
+              <a href="{% url 'tours_app:detail' tour.category|slugify tour.slug %}">
                 <div class="tour--new__info">
                   <span class="tour--new__city">{{ tour.place }}</span>
                   <span class="tour--new__day">{{ tour.duration }} {% trans 'dia(s)' %}</span>

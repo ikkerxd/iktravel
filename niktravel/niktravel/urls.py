@@ -21,13 +21,17 @@ from django.conf.urls.i18n import i18n_patterns
 
 urlpatterns = [
     path('i18n/', include('django.conf.urls.i18n')),
+    path('admin/', admin.site.urls),
+
+    #app tours
+    path('', include('applications.order.urls')),
 ]
 
 urlpatterns += i18n_patterns(
-    path('admin/', admin.site.urls),
     #app home
     re_path(r'^', include('applications.home.urls')),
 
     #app tours
     path('tour/', include('applications.tours.urls')),
+
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

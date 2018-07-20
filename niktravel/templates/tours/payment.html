@@ -53,24 +53,19 @@
       <form method="POST" class="form--info">{% csrf_token %}
         <div class="form__group">
           <label for="">Nombres Completo</label>
-          <input class="form__input" type="text">
+          {{ form.full_name }}
         </div>
         <div class="form__group">
           <label for="">Email</label>
-          <input class="form__input" type="email">
+          {{ form.email }}
         </div>
         <div class="form__group">
           <label for="">Codigo Postal</label>
-          <input class="form__input" type="text">
+          {{ form.postal_code }}
         </div>
         <div class="form__group">
           <label for="">Pais</label>
-          <select class="form__input" name=select"" id="">
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="mercedes">Mercedes</option>
-            <option value="audi">Audi</option>
-          </select>
+          {{ form.country }}
         </div>
         <button class="form__btn" type="submit"></button>
       </form>

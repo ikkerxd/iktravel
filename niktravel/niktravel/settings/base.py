@@ -36,7 +36,7 @@ DJANGO_APPS = [
 ]
 
 THIRD_APPS = [
-
+    'django_countries',
 ]
 
 LOCAL_APPS = [
@@ -45,6 +45,7 @@ LOCAL_APPS = [
     'applications.tours',
     'applications.galeria',
     'applications.itinerario',
+    'applications.order',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_APPS + LOCAL_APPS
@@ -98,3 +99,9 @@ LANGUAGES = (
     ('es', _('Español')),
     ('en', _('Ingles')),
 )
+
+# PAYPAL
+
+PAYPAL_MODE = get_secrets('PAYPAL_MODE')
+PAYPAL_CLIENT_ID = get_secrets('PAYPAL_CLIENT_ID')
+PAYPAL_CLIENT_SECRET = get_secrets('PAYPAL_CLIENT_SECRET')

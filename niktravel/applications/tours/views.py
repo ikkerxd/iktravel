@@ -2,6 +2,7 @@
 from django.views.generic import DetailView, FormView, TemplateView
 from django.views.generic.detail import SingleObjectMixin
 from django.urls import reverse
+from django.shortcuts import redirect
 
 # local
 from applications.galeria.models import Photo
@@ -9,6 +10,8 @@ from applications.itinerario.models import Itinerary
 from .models import Tour
 
 from .forms import CartForm
+from applications.order.forms import OrderForm
+from applications.order.paypal import paypal_create 
 
 # Create your views here.
 
@@ -65,31 +68,37 @@ class PaymentView(SingleObjectMixin, FormView):
     model = Tour
     template_name = "tours/payment.html"
     context_object_name = 'tour'
-    form_class = CartForm
+    form_class = OrderForm
+
+    price = 0.00
+    quantity = 0
+    total = 0.00
 
     def get_context_data(self, **kwargs):
         context = super(PaymentView, self).get_context_data(**kwargs)
         print('______________________session____________________________')
-        quantity = self.request.session.get('quantity')
-        price = self.object.price_des_dolar
-        print(type(quantity))
-        print(type(price))
-        print(price)
-        print(quantity)
-        total = int(quantity) * price
-        print(total)
-        context['quantity'] = quantity
-        context['total'] = total
+        context['quantity'] = self.quantity
+        context['total'] = self.total
         return context
 
     def get(self, *args, **kwargs):
+        print('enteeeeeeeeeeeeeee al get')
         self.object = self.get_object()
+        self.quantity = self.request.session.get('quantity')
+        self.price = self.object.price_des_dolar
+        self.total = int(self.quantity) * self.price
+
         return super().get(*args, **kwargs)
 
     def post(self, request, *args, **kwargs):
+        print('e------------entre la post')
         self.object = self.get_object()
-        return super().post(request, *args, **kwargs)
-    
-    def get_absolute_url(self):
-        from django.core.urlresolvers import reverse
-        return reverse('/', kwargs={'pk': self.pk})
+
+        name = self.object.name
+        price = self.object.price_des_dolar
+        quantity = request.session.get('quantity')
+        total = int(quantity) * price
+        # redirect_url = paypal_create(request, 'henrry joel')
+        return redirect(
+            paypal_create(request, name, price, quantity, total)
+        )
