@@ -59,7 +59,6 @@ class CartView(SingleObjectMixin, FormView):
         return reverse(
             'tours_app:payment',
             kwargs={
-                'category': slugify(self.object.category),
                 'slug': self.object.slug,
             }
         )
