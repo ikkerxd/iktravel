@@ -29,7 +29,7 @@ def paypal_create(request, name, price, quantity, total):
 
         # Set redirect urls
         "redirect_urls": {
-            "return_url": request.build_absolute_uri('/paypal/execute/'),
+            "return_url": request.build_absolute_uri('/paypal/payment/execute/'),
             "cancel_url": request.build_absolute_uri('/')
         },
 
@@ -90,4 +90,3 @@ def paypal_execute(request):
         # el pago ya se concreto
         pass
     return redirect('/felicitaciones/')
-

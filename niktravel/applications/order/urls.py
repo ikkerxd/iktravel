@@ -12,7 +12,7 @@ urlpatterns = [
     #     name='paypal_create'
     # ),
     path(
-        r'paypal/execute/',
+        r'paypal/payment/execute/',
         paypal_execute,
         name='paypal_execute'
     ),

@@ -29,7 +29,7 @@ urlpatterns = [
 
 urlpatterns += i18n_patterns(
     #app home
-    re_path(r'^', include('applications.home.urls')),
+    path('', include('applications.home.urls')),
 
     #app tours
     path('tour/', include('applications.tours.urls')),
